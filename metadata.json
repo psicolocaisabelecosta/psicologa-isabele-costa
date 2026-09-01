@@ -1,0 +1,6 @@
+{
+  "name": "Psicóloga Isabele Costa | Terapia Online · Mulheres & LGBTQIAPN+",
+  "description": "Atendimento psicológico online com a Psicóloga Isabele Costa (CRP 06/214123). Espaço seguro e acolhedor com foco no público feminino e LGBTQIAPN+.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
