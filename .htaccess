@@ -1,0 +1,29 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # 1. Se a requisição for para um arquivo existente, serve diretamente
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # 2. Se acessar a raiz (/), serve dist/index.html sem alterar a URL no navegador
+  RewriteRule ^$ dist/index.html [L]
+
+  # 3. Qualquer outra rota não encontrada envia para dist/index.html
+  RewriteRule ^(.*)$ dist/index.html [L]
+</IfModule>
+
+# Tipos MIME adequados para JavaScript ES Modules e WebP
+<IfModule mod_mime.c>
+  AddType application/javascript js mjs
+  AddType text/css css
+  AddType image/webp webp
+  AddType image/svg+xml svg
+  AddType font/woff2 woff2
+</IfModule>
+
+# Habilitar compressão GZIP se disponível na Hostinger
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>

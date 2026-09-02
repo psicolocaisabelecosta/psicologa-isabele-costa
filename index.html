@@ -44,6 +44,26 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Fallback de segurança para Hostinger / servidores estáticos:
+      // Se o servidor servir a raiz diretamente sem Vite e o React dev não montar,
+      // carrega imediatamente os arquivos de produção compilados
+      setTimeout(function() {
+        var root = document.getElementById('root');
+        if (root && (!root.innerHTML || root.innerHTML.trim() === '')) {
+          var link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.href = './assets/bundle.css';
+          document.head.appendChild(link);
+
+          var s = document.createElement('script');
+          s.type = 'module';
+          s.crossOrigin = '';
+          s.src = './assets/bundle.js';
+          document.body.appendChild(s);
+        }
+      }, 300);
+    </script>
   </body>
 </html>
 
