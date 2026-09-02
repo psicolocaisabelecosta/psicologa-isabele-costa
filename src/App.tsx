@@ -339,9 +339,9 @@ export default function App() {
                   >
                     {/* Detalhe botânico artesanal no canto da moldura da foto */}
                     <FloralCardBudBottomRight 
-                      className="absolute -top-2.5 -right-2.5 pointer-events-none hidden sm:block z-10" 
-                      size={38} 
-                      opacity={0.38} 
+                      className="absolute -top-2.5 -right-2.5 pointer-events-none z-10" 
+                      size={40} 
+                      opacity={0.65} 
                       color="var(--color-gold-accent)" 
                     />
                     <div 
@@ -445,8 +445,8 @@ export default function App() {
                 >
                   {/* Detalhe botânico sutil correndo na borda superior direita */}
                   <FloralCardBorderVineTop 
-                    className="absolute top-1.5 right-2 pointer-events-none hidden sm:block" 
-                    opacity={0.24} 
+                    className="absolute top-1.5 right-2 pointer-events-none" 
+                    opacity={0.6} 
                     color="var(--color-gold-accent)" 
                   />
 
@@ -549,10 +549,10 @@ export default function App() {
               >
                 {/* Ramo botânico no canto superior direito */}
                 <FloralCardBranchTopLeft 
-                  className="absolute top-1.5 right-1.5 pointer-events-none hidden sm:block" 
+                  className="absolute top-1.5 right-1.5 pointer-events-none" 
                   style={{ transform: 'scaleX(-1)' }}
-                  size={44} 
-                  opacity={0.28} 
+                  size={42} 
+                  opacity={0.65} 
                   color="var(--color-gold-accent)" 
                 />
 
@@ -624,9 +624,9 @@ export default function App() {
               >
                 {/* Florzinha botânica no canto inferior direito */}
                 <FloralCardBudBottomRight 
-                  className="absolute bottom-2 right-2 pointer-events-none hidden sm:block" 
-                  size={42} 
-                  opacity={0.32} 
+                  className="absolute bottom-2 right-2 pointer-events-none" 
+                  size={40} 
+                  opacity={0.65} 
                   color="var(--color-gold-accent)" 
                 />
 
@@ -665,9 +665,9 @@ export default function App() {
               >
                 {/* Haste botânica sutil no canto inferior esquerdo */}
                 <FloralCardStemBottomLeft 
-                  className="absolute bottom-1.5 left-1.5 pointer-events-none hidden sm:block" 
-                  size={38} 
-                  opacity={0.28} 
+                  className="absolute bottom-1.5 left-1.5 pointer-events-none" 
+                  size={36} 
+                  opacity={0.65} 
                   color="var(--color-gold-accent)" 
                 />
 
@@ -777,9 +777,9 @@ export default function App() {
               >
                 {/* Folhinhas duplas no canto superior direito */}
                 <FloralCardTwinLeaves 
-                  className="absolute top-2.5 right-2.5 pointer-events-none hidden sm:block" 
-                  size={30} 
-                  opacity={0.3} 
+                  className="absolute top-2.5 right-2.5 pointer-events-none" 
+                  size={32} 
+                  opacity={0.65} 
                   color="var(--color-gold-accent)" 
                 />
 
@@ -837,9 +837,9 @@ export default function App() {
               >
                 {/* Botão floral delicado no canto inferior direito */}
                 <FloralCardBudBottomRight 
-                  className="absolute bottom-2 right-2 pointer-events-none hidden sm:block" 
+                  className="absolute bottom-2 right-2 pointer-events-none" 
                   size={36} 
-                  opacity={0.3} 
+                  opacity={0.65} 
                   color="var(--color-gold-accent)" 
                 />
 
@@ -871,8 +871,8 @@ export default function App() {
               >
                 {/* Gavinha sutil correndo na borda superior */}
                 <FloralCardBorderVineTop 
-                  className="absolute top-1 right-2 pointer-events-none hidden sm:block" 
-                  opacity={0.24} 
+                  className="absolute top-1 right-2 pointer-events-none" 
+                  opacity={0.6} 
                   color="var(--color-gold-accent)" 
                 />
 
@@ -904,9 +904,9 @@ export default function App() {
               >
                 {/* Haste botânica sutil no canto inferior esquerdo */}
                 <FloralCardStemBottomLeft 
-                  className="absolute bottom-1.5 left-1.5 pointer-events-none hidden sm:block" 
-                  size={38} 
-                  opacity={0.28} 
+                  className="absolute bottom-1.5 left-1.5 pointer-events-none" 
+                  size={36} 
+                  opacity={0.65} 
                   color="var(--color-gold-accent)" 
                 />
 
@@ -967,15 +967,15 @@ export default function App() {
               {/* Detalhes florais variados nos cantos do quadro de acolhimento */}
               <FloralCardSingleBlossom 
                 size={38} 
-                opacity={0.34} 
+                opacity={0.65} 
                 color="var(--color-gold-accent)" 
-                className="absolute top-2 right-2 pointer-events-none hidden sm:block" 
+                className="absolute top-2 right-2 pointer-events-none" 
               />
               <FloralCardStemBottomLeft 
-                size={44} 
-                opacity={0.3} 
+                size={40} 
+                opacity={0.65} 
                 color="var(--color-gold-accent)" 
-                className="absolute bottom-1 left-1 pointer-events-none hidden sm:block" 
+                className="absolute bottom-1 left-1 pointer-events-none" 
               />
 
               <p 
@@ -1059,9 +1059,9 @@ export default function App() {
                   <span>A terapia online funciona mesmo?</span>
                   <div className="flex items-center gap-2.5 flex-shrink-0">
                     <FloralCardTwinLeaves 
-                      className="pointer-events-none hidden sm:block" 
-                      size={20} 
-                      opacity={0.25} 
+                      className="pointer-events-none" 
+                      size={22} 
+                      opacity={0.65} 
                       color="var(--color-gold-accent)" 
                     />
                     <ChevronDown className="w-5 h-5 flex-shrink-0 transition-transform duration-300 group-open:rotate-180" style={{ color: 'var(--color-sage-dark)' }} />
@@ -1118,9 +1118,9 @@ export default function App() {
                   <span>Com que frequência são as sessões?</span>
                   <div className="flex items-center gap-2.5 flex-shrink-0">
                     <FloralCardSingleBlossom 
-                      className="pointer-events-none hidden sm:block" 
-                      size={20} 
-                      opacity={0.24} 
+                      className="pointer-events-none" 
+                      size={22} 
+                      opacity={0.65} 
                       color="var(--color-gold-accent)" 
                     />
                     <ChevronDown className="w-5 h-5 flex-shrink-0 transition-transform duration-300 group-open:rotate-180" style={{ color: 'var(--color-sage-dark)' }} />
@@ -1160,9 +1160,9 @@ export default function App() {
                   <span>Qual é o valor da sessão?</span>
                   <div className="flex items-center gap-2.5 flex-shrink-0">
                     <FloralCardStemBottomLeft 
-                      className="pointer-events-none hidden sm:block" 
-                      size={22} 
-                      opacity={0.24} 
+                      className="pointer-events-none" 
+                      size={24} 
+                      opacity={0.65} 
                       color="var(--color-gold-accent)" 
                     />
                     <ChevronDown className="w-5 h-5 flex-shrink-0 transition-transform duration-300 group-open:rotate-180" style={{ color: 'var(--color-sage-dark)' }} />
@@ -1202,9 +1202,9 @@ export default function App() {
                   <span>Como faço para começar?</span>
                   <div className="flex items-center gap-2.5 flex-shrink-0">
                     <FloralCardBudBottomRight 
-                      className="pointer-events-none hidden sm:block" 
-                      size={22} 
-                      opacity={0.28} 
+                      className="pointer-events-none" 
+                      size={24} 
+                      opacity={0.65} 
                       color="var(--color-gold-accent)" 
                     />
                     <ChevronDown className="w-5 h-5 flex-shrink-0 transition-transform duration-300 group-open:rotate-180" style={{ color: 'var(--color-sage-dark)' }} />
