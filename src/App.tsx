@@ -2037,123 +2037,139 @@ export default function App() {
         <section 
           id="hero"
           aria-labelledby="hero-title"
-          className="py-10 sm:py-16 md:py-20 lg:py-24"
+          className="py-12 sm:py-16 md:py-20 lg:py-24"
+        >
+          <div className="max-w-[860px] mx-auto px-5 sm:px-8 text-center flex flex-col items-center gap-6 sm:gap-7">
+            
+            {/* Eyebrow / Identificador sutil */}
+            <div 
+              className="inline-flex items-center justify-center gap-2.5 px-4 py-1.5 rounded-full border shadow-sm"
+              style={{ 
+                backgroundColor: 'var(--color-sage-soft)',
+                borderColor: 'var(--color-sage-medium)',
+                color: 'var(--color-sage-dark)'
+              }}
+            >
+              <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'var(--color-gold-accent)' }}></span>
+              <span className="text-xs sm:text-sm font-semibold tracking-wider uppercase">
+                Psicoterapia Online · Mulheres & LGBTQIAPN+
+              </span>
+            </div>
+
+            {/* Título Principal */}
+            <h1 
+              id="hero-title"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-medium leading-[1.18] tracking-tight max-w-[22ch]"
+              style={{ fontFamily: 'var(--font-serif)', color: 'var(--color-primary-dark)' }}
+            >
+              Você não precisa dar conta de tudo só.
+            </h1>
+
+            {/* Subtítulo */}
+            <p 
+              className="text-base sm:text-lg md:text-[1.15rem] leading-relaxed max-w-[56ch]"
+              style={{ color: 'var(--color-text-muted)' }}
+            >
+              Um espaço de terapia online com foco no público feminino e LGBTQIAPN+, para fortalecer a autoestima, aliviar a autocobrança e cultivar relações mais saudáveis.
+            </p>
+
+            {/* Citação Carl Rogers (Destaque sutil com autoria) */}
+            <div 
+              className="rounded-2xl py-4 px-6 my-1 border max-w-[580px] w-full text-center"
+              style={{ 
+                backgroundColor: 'var(--color-sage-soft)',
+                borderColor: 'var(--color-sage-medium)'
+              }}
+            >
+              <blockquote 
+                className="italic text-base sm:text-[1.1rem] leading-relaxed mb-1.5"
+                style={{ fontFamily: 'var(--font-serif)', color: 'var(--color-text-quote)' }}
+              >
+                &ldquo;O paradoxo curioso é que quando eu me aceito como eu sou, então eu mudo.&rdquo;
+              </blockquote>
+              <cite 
+                className="not-italic text-xs sm:text-sm font-semibold block"
+                style={{ color: 'var(--color-sage-dark)' }}
+              >
+                — Carl Rogers
+              </cite>
+            </div>
+
+            {/* Botão de Ação Principal (Único) */}
+            <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+              <a
+                id="btn-whatsapp-hero"
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full text-white font-semibold text-base transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 shadow-md w-full sm:w-auto"
+                style={{ 
+                  backgroundColor: 'var(--color-primary-dark)',
+                  boxShadow: 'var(--shadow-btn)'
+                }}
+                aria-label="Falar no WhatsApp para agendar primeira conversa"
+              >
+                {/* SVG WhatsApp Oficial */}
+                <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                <span>Agendar primeira conversa</span>
+              </a>
+            </div>
+
+            {/* Sinais de Confiança Visíveis */}
+            <div 
+              className="pt-4 mt-1 border-t flex flex-wrap items-center justify-center gap-y-2 gap-x-4 text-xs sm:text-sm w-full"
+              style={{ 
+                borderColor: 'var(--color-border-subtle)',
+                color: 'var(--color-text-muted)'
+              }}
+            >
+              <div className="inline-flex items-center gap-1.5 font-medium">
+                <ShieldCheck size={16} style={{ color: 'var(--color-gold-accent)' }} />
+                <span>Psicóloga Isabele Costa · CRP 06/214123</span>
+              </div>
+              <span className="hidden sm:inline" style={{ color: 'var(--color-border-medium)' }}>•</span>
+              <div className="inline-flex items-center gap-1.5 font-medium">
+                <CalendarCheck size={16} style={{ color: 'var(--color-gold-accent)' }} />
+                <span>Atendimento 100% online</span>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        {/* ==========================================================================
+            SEÇÃO: SOBRE A ISABELE (Apresentação da Psicóloga)
+            ========================================================================== */}
+        <section 
+          id="sobre"
+          aria-labelledby="about-title"
+          className="py-14 sm:py-20 md:py-24 border-t"
+          style={{ 
+            backgroundColor: 'var(--color-bg-card)',
+            borderColor: 'var(--color-border-subtle)'
+          }}
         >
           <div className="max-w-[1160px] mx-auto px-5 sm:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
               
-              {/* Coluna de Texto e Ações (7 colunas no desktop) */}
-              <div className="lg:col-span-7 flex flex-col gap-6 text-left">
-                
-                {/* Eyebrow / Identificador sutil */}
-                <div className="inline-flex items-center gap-2.5">
-                  <span className="w-6 h-[1.5px]" style={{ backgroundColor: 'var(--color-sage-medium)' }}></span>
-                  <span 
-                    className="text-xs sm:text-sm font-semibold tracking-wider uppercase"
-                    style={{ color: 'var(--color-sage-dark)' }}
-                  >
-                    Psicoterapia Online · Mulheres & LGBTQIAPN+
-                  </span>
-                </div>
-
-                {/* Título Principal */}
-                <h1 
-                  id="hero-title"
-                  className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-medium leading-[1.18] tracking-tight"
-                  style={{ fontFamily: 'var(--font-serif)', color: 'var(--color-primary-dark)' }}
-                >
-                  Você não precisa dar conta de tudo só.
-                </h1>
-
-                {/* Subtítulo */}
-                <p 
-                  className="text-base sm:text-lg leading-relaxed max-w-[58ch]"
-                  style={{ color: 'var(--color-text-muted)' }}
-                >
-                  Um espaço de terapia online com foco no público feminino e LGBTQIAPN+, para fortalecer a autoestima, aliviar a autocobrança e cultivar relações mais saudáveis.
-                </p>
-
-                {/* Citação Carl Rogers (Destaque sutil com autoria) */}
-                <div 
-                  className="rounded-r-2xl py-3.5 px-5 my-1 border-l-[3px]"
-                  style={{ 
-                    backgroundColor: 'var(--color-sage-soft)',
-                    borderColor: 'var(--color-gold-accent)'
-                  }}
-                >
-                  <blockquote 
-                    className="italic text-base sm:text-[1.05rem] leading-snug mb-1"
-                    style={{ fontFamily: 'var(--font-serif)', color: 'var(--color-text-quote)' }}
-                  >
-                    &ldquo;O paradoxo curioso é que quando eu me aceito como eu sou, então eu mudo.&rdquo;
-                  </blockquote>
-                  <cite 
-                    className="not-italic text-xs sm:text-sm font-semibold block"
-                    style={{ color: 'var(--color-sage-dark)' }}
-                  >
-                    — Carl Rogers
-                  </cite>
-                </div>
-
-                {/* Botão de Ação Principal (Único) */}
-                <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-                  <a
-                    id="btn-whatsapp-hero"
-                    href={whatsappUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full text-white font-semibold text-base transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 shadow-md"
-                    style={{ 
-                      backgroundColor: 'var(--color-primary-dark)',
-                      boxShadow: 'var(--shadow-btn)'
-                    }}
-                    aria-label="Falar no WhatsApp para agendar primeira conversa"
-                  >
-                    {/* SVG WhatsApp Oficial */}
-                    <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                    </svg>
-                    <span>Agendar primeira conversa</span>
-                  </a>
-                </div>
-
-                {/* Sinais de Confiança Visíveis */}
-                <div 
-                  className="pt-4 mt-2 border-t flex flex-wrap items-center gap-y-2 gap-x-4 text-xs sm:text-sm"
-                  style={{ 
-                    borderColor: 'var(--color-border-subtle)',
-                    color: 'var(--color-text-muted)'
-                  }}
-                >
-                  <div className="inline-flex items-center gap-1.5 font-medium">
-                    <ShieldCheck size={16} style={{ color: 'var(--color-gold-accent)' }} />
-                    <span>Psicóloga Isabele Costa · CRP 06/214123</span>
-                  </div>
-                  <span className="hidden sm:inline" style={{ color: 'var(--color-border-medium)' }}>•</span>
-                  <div className="inline-flex items-center gap-1.5 font-medium">
-                    <CalendarCheck size={16} style={{ color: 'var(--color-gold-accent)' }} />
-                    <span>Atendimento 100% online</span>
-                  </div>
-                </div>
-
-              </div>
-
-              {/* Coluna da Foto / Placeholder da Psicóloga (5 colunas no desktop) */}
-              <div className="lg:col-span-5 flex justify-center mt-4 lg:mt-0">
-                <div className="relative w-full max-w-[380px] sm:max-w-[400px]">
+              {/* Coluna 1: Foto Principal da Isabele Costa com Moldura e Selo */}
+              <div className="lg:col-span-5 flex justify-center order-1 lg:order-1">
+                <div className="relative w-full max-w-[380px]">
                   
-                  {/* Fundo decorativo sutil (sálvia) */}
+                  {/* Fundo decorativo sutil */}
                   <div 
-                    className="absolute -inset-2.5 sm:-inset-3 rounded-3xl -rotate-1 opacity-90 transition-transform"
+                    className="absolute -inset-2.5 sm:-inset-3 rounded-3xl rotate-1 opacity-90"
                     style={{ 
-                      background: 'linear-gradient(135deg, var(--color-sage-light) 0%, var(--color-sage-soft) 100%)' 
+                      background: 'linear-gradient(135deg, var(--color-sage-soft) 0%, var(--color-sage-light) 100%)' 
                     }}
                     aria-hidden="true"
                   ></div>
 
-                  {/* Moldura da Foto */}
+                  {/* Moldura da Foto da Isabele */}
                   <div 
-                    className="relative rounded-2xl p-2.5 sm:p-3 shadow-lg border"
+                    className="relative rounded-2xl p-2.5 sm:p-3 shadow-md border group"
                     style={{ 
                       backgroundColor: 'var(--color-bg-card)',
                       borderColor: 'var(--color-border-subtle)',
@@ -2161,22 +2177,23 @@ export default function App() {
                     }}
                   >
                     <div 
-                      className="relative w-full h-[380px] sm:h-[430px] rounded-xl overflow-hidden flex flex-col justify-end"
-                      style={{ backgroundColor: 'var(--color-sage-soft)' }}
+                      className="relative w-full h-[390px] sm:h-[430px] rounded-xl overflow-hidden flex flex-col justify-end"
+                      style={{ 
+                        backgroundColor: 'var(--color-sage-soft)'
+                      }}
                     >
-                      {/* Foto Real da Psicóloga Isabele Costa */}
                       <img 
                         src="/assets/foto/foto-isabele-costa.webp" 
                         alt="Foto da Psicóloga Isabele Costa (CRP 06/214123)"
-                        className="w-full h-full object-cover object-top block"
+                        className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                         loading="lazy"
                       />
 
                       {/* Selo flutuante de acolhimento e ética */}
                       <div 
-                        className="absolute bottom-3 left-3 right-3 p-3 rounded-xl backdrop-blur-md border shadow-sm flex items-center gap-3"
+                        className="relative z-10 m-3 p-3 rounded-xl backdrop-blur-md border shadow-sm flex items-center gap-3"
                         style={{ 
-                          backgroundColor: 'rgba(255, 255, 255, 0.94)',
+                          backgroundColor: 'rgba(255, 255, 255, 0.95)',
                           borderColor: 'var(--color-border-subtle)'
                         }}
                       >
@@ -2204,82 +2221,6 @@ export default function App() {
                             Atendimento ético conforme o CFP
                           </p>
                         </div>
-                      </div>
-
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </section>
-
-        {/* ==========================================================================
-            SEÇÃO: SOBRE A ISABELE (Apresentação da Psicóloga)
-            ========================================================================== */}
-        <section 
-          id="sobre"
-          aria-labelledby="about-title"
-          className="py-14 sm:py-20 md:py-24 border-t"
-          style={{ 
-            backgroundColor: 'var(--color-bg-card)',
-            borderColor: 'var(--color-border-subtle)'
-          }}
-        >
-          <div className="max-w-[1160px] mx-auto px-5 sm:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-              
-              {/* Coluna 1: Imagem de Atmosfera (Espaço Acolhedor / Café & Caderno) */}
-              <div className="lg:col-span-5 flex justify-center order-1 lg:order-1">
-                <div className="relative w-full max-w-[360px]">
-                  
-                  {/* Fundo decorativo sutil */}
-                  <div 
-                    className="absolute -inset-2.5 sm:-inset-3 rounded-3xl rotate-1 opacity-90"
-                    style={{ 
-                      background: 'linear-gradient(135deg, var(--color-sage-soft) 0%, var(--color-sage-light) 100%)' 
-                    }}
-                    aria-hidden="true"
-                  ></div>
-
-                  {/* Moldura da Foto da Isabele */}
-                  <div 
-                    className="relative rounded-2xl p-2.5 sm:p-3 shadow-md border group"
-                    style={{ 
-                      backgroundColor: 'var(--color-bg-card)',
-                      borderColor: 'var(--color-border-subtle)',
-                      boxShadow: 'var(--shadow-card)'
-                    }}
-                  >
-                    <div 
-                      className="relative w-full h-[370px] sm:h-[400px] rounded-xl overflow-hidden flex flex-col justify-end"
-                      style={{ 
-                        backgroundColor: 'var(--color-sage-soft)'
-                      }}
-                    >
-                      <img 
-                        src="/assets/foto/foto-isabele-costa-2.jpg" 
-                        alt="Foto da Psicóloga Isabele Costa (CRP 06/214123)"
-                        className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                        loading="lazy"
-                      />
-
-                      {/* Legenda visual sutil integrada */}
-                      <div 
-                        className="relative z-10 p-4 pt-8 text-white text-left"
-                        style={{
-                          background: 'linear-gradient(to top, rgba(36, 20, 45, 0.85) 0%, rgba(36, 20, 45, 0.4) 60%, transparent 100%)'
-                        }}
-                      >
-                        <div className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider mb-0.5" style={{ color: 'var(--color-sage-light)' }}>
-                          <UserCheck size={13} />
-                          <span>Isabele Costa</span>
-                        </div>
-                        <p className="text-xs leading-snug text-white/95">
-                          Psicóloga Clínica · CRP 06/214123
-                        </p>
                       </div>
                     </div>
                   </div>

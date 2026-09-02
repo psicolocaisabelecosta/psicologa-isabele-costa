@@ -1,6 +1,6 @@
 node_modules/
 build/
-dist/
+# dist/ is included so Hostinger/cPanel can deploy static files directly without Node server
 coverage/
 .DS_Store
 *.log
